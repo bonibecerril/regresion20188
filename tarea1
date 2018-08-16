@@ -1,0 +1,80 @@
+#### 1.- GENERAR VECTORES
+#A
+c(1:15)
+#B
+c(15:1)
+#C
+c(1:15,15:1)
+#D
+tiempo<-c(2,7,8)
+#e
+a<-c(1,7,9)
+rep(a,7)
+#F
+c<-c(rep(9,15),rep(3,9))
+c
+#G
+b<-c(rep(7,12),rep(0,25),rep(5,35))
+b
+
+### 2
+set.seed(50)
+vector1<-sample(0:999,250,replace = T)
+vector2<-sample(0:999,250,replace = T)
+vector1
+#A
+####sample es una funcion que nos genera numeros aleatorios y cada vez-
+#que corramos la variable en este nos dara una base diferente- 
+#de 250 numeros enteros que esten en el intervalo  entre (0,999),-
+# el replace= T permite que los valores se repitan 
+## set.seed  acompañado de la declaracion del vector permite que-
+#sin importar el numero de veces que corramos el vector cada que lo hagamos-
+#acompañado de set.seed nos arrojara la msma base.
+
+#########Matrices 
+d<-c(1,5,-2,1,2,-1,3,6,3)
+dim(d)<-c(3,3) ###genera una matriz de 3 filas por 3 columnas
+View(d)
+####remplaza la primera columna-
+# y agrega los datos de la suma de la segunda y tercera columna
+d[,1]<-d[,2]+d[,3] 
+d
+###2
+#matriz de 8 por 9 de valores aleatorios enteros entre 0 y 9
+f<-matrix(sample(0:9,72,replace=T),nrow =8 ,ncol = 9)
+
+f
+#A
+f==1
+f[f==1]
+
+#B
+f[1,3]
+#C
+g<-matrix(1:25,nrow =5 ,ncol = 5)
+g
+#d
+
+h<-f[,7]
+h
+#e
+l<-colSums(f,F)
+l
+ñ<-rowSums(f,F)
+ñ
+#f
+s<-matrix(sample(10:1000,20),nrow = 4,ncol = 5)
+s
+mean(s[,5])
+var(s[2,])
+rowMeans(s)
+colMeans(s)
+####de la matriz s la columna 1 y el renglon 4 tienen la media mas alta
+#G
+#columna con valores de 1 a matriz f
+f<-cbind(f,c(1,1,1,1,1,1,1,1))
+f
+#f
+#renglon con valores de 0 a matriz s
+s<-rbind(s,c(0,0,0,0,0))
+s
