@@ -1,0 +1,57 @@
+########  1
+
+z<-matrix(11:30, ncol = 5,nrow = 4)
+z
+
+a<-c("toluca" , "pachuca", "gdl", "monterrey")
+b<-c("escuela1","escuela2","escuela3","escuela4","escuela5")
+row.names(z)<-a
+colnames(z)<-b
+z
+z["toluca","escuela3"]
+z["gdl","escuela5"]
+z["pachuca","escuela1"]
+
+########2
+
+z2<-matrix(1:18, ncol = 3,nrow = 6)
+z2
+z2[3,3]
+
+####3
+
+s<-matrix(1:9,nrow=3)
+s
+s[,2]*s[,1]
+
+######4
+
+a2<-c("pequeño","largo","enorme")
+b2<-a2!="largo"
+b2
+a2[a2=!!b2]
+
+###5
+facultad<-c("economia","ingenieria","humanidades","geografia")
+licenciatura<-c("calculo","algebra","filosofia","ambiente")
+calalumnos<-c(7,7,8,9)
+escuela<-data.frame(facultad,licenciatura,calalumnos)
+class(facultad)
+class(licenciatura)
+class(calalumnos)
+escuela<-escuela[-3,]
+escuela
+
+####6
+
+nombres<-c("carlos","juan","raquel","paty")
+edad<-c(32,35,43,25)
+situacion<-c("casado","soltero","soltero","union libre")                                  
+seguro<-c("IMSS","IMSS","ISSSTE","PRIVADO")
+ocupacion<-c("contador","carpintero","profesora","diseñador")
+pares<-data.frame(seguro,nombres,edad,situacion,ocupacion)
+ocupacion[c(2,4)]
+seguro[c(1,3)]
+situacion[c(2,4)]
+sum(pares$edad)
+
